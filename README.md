@@ -104,4 +104,16 @@ as for example features which can then be merged to develop and so on.
 
 --------
 
+
+# Large Files
+
+There are some large files that are not included in this repo. These should be downloaded in order to run the 
+experiments provided here. The most important of all is: 
+- data/raw/CRS2018data.txt
+
+There are also result files which are too large to include. In particular we ah the results from pandas Profile. Namely: 
+- notebooks/CRS2018Profile.html
+
+
+
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
