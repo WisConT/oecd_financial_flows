@@ -16,7 +16,7 @@ from spacy_transformers.util import cyclic_triangular_rate
 
 
 @plac.annotations(
-    model=("Model name", "positional", None, str),
+    model=("Model name", "positional", None, str), #"en_trf_bertbaseuncased_lg", str),  #
     input_dir=("Optional input directory", "option", "i", Path),
     output_dir=("Optional output directory", "option", "o", Path),
     use_test=("Whether to use the actual test set", "flag", "E"),
