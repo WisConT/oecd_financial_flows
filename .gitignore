@@ -141,3 +141,4 @@ data/raw/.DS_Store
 data/raw/CRS2018data.txt
 notebooks/CRS2018Profile.html
 data/raw/glue
+data/processed/glue/
