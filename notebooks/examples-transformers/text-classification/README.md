@@ -58,7 +58,7 @@ and unpack it to some directory `$GLUE_DIR`.
 
 ```bash
 export GLUE_DIR=/Users/pedrobaiz/src/oecd_financial_flows/data/raw/glue
-export TASK_NAME=MRPC
+export TASK_NAME=STS-B
 
 python /Users/pedrobaiz/src/oecd_financial_flows/notebooks/examples-transformers/text-classification/run_glue.py \
   --model_name_or_path bert-base-cased \
@@ -157,9 +157,9 @@ Using Apex and 16 bit precision, the fine-tuning on MRPC only takes 27 seconds. 
 [apex](https://github.com/NVIDIA/apex), then run the following example:
 
 ```bash
-export GLUE_DIR=/path/to/glue
+export GLUE_DIR=/Users/pedrobaiz/src/oecd_financial_flows/data/raw/glue
 
-python run_glue.py \
+python /Users/pedrobaiz/src/oecd_financial_flows/notebooks/examples-transformers/text-classification/run_glue.py \
   --model_name_or_path bert-base-cased \
   --task_name MRPC \
   --do_train \
@@ -169,7 +169,7 @@ python run_glue.py \
   --per_device_train_batch_size 32 \
   --learning_rate 2e-5 \
   --num_train_epochs 3.0 \
-  --output_dir /tmp/mrpc_output/ \
+  --output_dir /Users/pedrobaiz/src/oecd_financial_flows/data/processed/glue/mrpc_output2/
   --fp16
 ```
 
@@ -211,10 +211,10 @@ loss = 0.07231863956341798
 The following example uses the BERT-large, uncased, whole-word-masking model and fine-tunes it on the MNLI task.
 
 ```bash
-export GLUE_DIR=/path/to/glue
+export GLUE_DIR=/Users/pedrobaiz/src/oecd_financial_flows/data/raw/glue
 
 python -m torch.distributed.launch \
-    --nproc_per_node 8 run_glue.py \
+    --nproc_per_node 4 /Users/pedrobaiz/src/oecd_financial_flows/notebooks/examples-transformers/text-classification/run_glue.py \
     --model_name_or_path bert-base-cased \
     --task_name mnli \
     --do_train \
@@ -224,8 +224,9 @@ python -m torch.distributed.launch \
     --per_device_train_batch_size 8 \
     --learning_rate 2e-5 \
     --num_train_epochs 3.0 \
-    --output_dir output_dir \
+    --output_dir /Users/pedrobaiz/src/oecd_financial_flows/data/processed/glue/MNLI
 ```
+
 
 The results  are the following:
 
